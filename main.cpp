@@ -22,7 +22,7 @@ struct Rectangle
     Rectangle()
     {
     }
-    Rectangle(int a, int b, int c, int d)  // »ı¼ºÀÚ
+    Rectangle(int a, int b, int c, int d)  // ìƒì„±ì
     {
         left=a,top=b, right=c,bottom=d;
     }
@@ -47,6 +47,20 @@ struct Rectangle
         return Point(right,bottom);
     }
 
+    Point CenterPoint()
+    {
+        return Point((left + right)/2, (top + bottom)/2);
+    }
+
+    void CopyRect(Rectangle r)
+    {
+        left = r.left,top=r.top, right=r.right,bottom=r.bottom;
+    }
+
+    Point DeflateRect()
+    {
+
+    }
 
 };
 
@@ -64,15 +78,3 @@ struct KKK
 };
 
 KKK a;
-
-
-
-
-
-
-
-
-
-
-int main(){}
-
